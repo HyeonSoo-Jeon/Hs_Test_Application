@@ -6,10 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 public class EnterActivity extends AppCompatActivity {
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,33 +24,42 @@ public class EnterActivity extends AppCompatActivity {
         ImgView3 = findViewById(R.id.str3);
         ImgView4 = findViewById(R.id.str4);
 
+        Animation popAnim = AnimationUtils.loadAnimation(this,R.anim.pop);
+        popAnim.setInterpolator(AnimationUtils.loadInterpolator(this,android.R.anim.overshoot_interpolator));
+
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 ImgView1.setVisibility(View.VISIBLE);
+                ImgView1.startAnimation(popAnim);
+
             }
-        }, 400);
+        }, 200);
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 ImgView2.setVisibility(View.VISIBLE);
+                ImgView2.startAnimation(popAnim);
             }
-        }, 900);
+        }, 700);
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 ImgView3.setVisibility(View.VISIBLE);
+                ImgView3.startAnimation(popAnim);
             }
-        }, 1400);
+        }, 1200);
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 ImgView4.setVisibility(View.VISIBLE);
+                ImgView4.startAnimation(popAnim);
             }
-        }, 1900);
+        }, 1700);
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -57,7 +67,7 @@ public class EnterActivity extends AppCompatActivity {
                 Intent intent = new Intent(EnterActivity.this, MainActivity.class);
                 startActivity(intent);
             }
-        }, 2300);
+        }, 2000);
     }
 
 }
