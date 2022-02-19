@@ -6,39 +6,62 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/title_hi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="60dp"
+        android:fontFamily="@font/iloveyou"
+        android:text="안녕하세요!"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        android:layout_gravity="center_vertical"/>
+
     <LinearLayout
+        android:id="@+id/userName"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_vertical"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="invisible">
+
 
         <TextView
+            android:id="@+id/enterName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginStart="60dp"
             android:fontFamily="@font/iloveyou"
+            android:text="이름을 입력해 주세요"
             android:textColor="@color/black"
-            android:textSize="40dp"/>
+            android:textSize="30sp" />
 
         <EditText
             android:id="@+id/input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="hi"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            />
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/iloveyou"
+            android:hint="이름"
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/answer"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:backgroundTint="#338275"
+            android:backgroundTint="#C3F2B6"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
             android:fontFamily="@font/iloveyou"
-            android:text="확인" />
+            android:text="확인"
+            android:textSize="20sp"
 
+            android:textColor="#000000" />
     </LinearLayout>
+
+
 </FrameLayout>
