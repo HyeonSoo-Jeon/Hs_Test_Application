@@ -38,11 +38,12 @@ public class Prob2Activity extends AppCompatActivity implements View.OnClickList
             // 다음 레벨 버튼 바꾸기
             case R.id.ToLv3:
                 // 다음 액티비티 바꾸기
-                Intent intent = new Intent(this, NameActivity.class);
+                Intent intent = new Intent(this, ResultActivity.class);
                 intent.putExtra("userName",userName);
                 intent.putExtra("AnswerCnt",AnswerCnt);
                 startActivity(intent);
                 finish();
+                break;
         }
     }
     @Override

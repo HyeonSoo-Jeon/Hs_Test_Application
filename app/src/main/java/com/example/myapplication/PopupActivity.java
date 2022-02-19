@@ -43,6 +43,7 @@ public class PopupActivity extends AppCompatActivity implements View.OnClickList
                 startActivity(intent);
                 finish();
                 finish();
+                break;
         }
 
     }

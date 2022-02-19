@@ -14,7 +14,8 @@
         android:layout_marginTop="100dp"
         android:textSize="30sp"
         android:fontFamily="@font/iloveyou"
-        android:text="Q2."/>
+        android:text="Q2."
+        android:textColor="@color/black"/>
 
     <TextView
         android:layout_width="wrap_content"
