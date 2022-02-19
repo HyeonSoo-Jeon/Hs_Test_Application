@@ -15,5 +15,9 @@
         <!-- 타이틀바 제거 -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-    </style>ㅗ
+    </style>
+    <style name="Theme.MyApplication.Dialog" parent="Theme.AppCompat.DayNight.Dialog">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 </resources>

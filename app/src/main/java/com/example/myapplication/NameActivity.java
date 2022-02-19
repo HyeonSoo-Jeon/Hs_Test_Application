@@ -14,7 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class NameActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText userName;
     private TextView titleHi;
@@ -59,21 +59,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.answer:
-                String answer = "hi";
                 String userInput = userName.getText().toString();
-                int answerCount = 0;
 
-                if(answer.equals(userInput)) {
-                    Intent intent = new Intent(this, Second.class);
-                    intent.putExtra("AnswerCount",answerCount);
+                if(userInput.length()!=0) {
+                    Intent intent = new Intent(this, PopupActivity.class);
+                    intent.putExtra("userName",userInput);
                     startActivity(intent);
-                    finish();
-
-
                 }
                 else{
-                    Toast.makeText(this, "input : "+userInput+"\nanswer : "+answer, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "이름을 입력해 주세요!", Toast.LENGTH_SHORT).show();
                 }
+                break;
         }
     }
 }

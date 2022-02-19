@@ -20,4 +20,8 @@
         <item name="windowNoTitle">true</item>
 
     </style>
+    <style name="Theme.MyApplication.Dialog" parent="Theme.AppCompat.DayNight.Dialog">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+</style>
 </resources>
