@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class ResultActivity extends AppCompatActivity implements View.OnClickListener {
@@ -27,6 +28,29 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
         findViewById(R.id.retry).setOnClickListener(this);
         findViewById(R.id.share).setOnClickListener(this);
 
+        TextView pointView = findViewById(R.id.point);
+        TextView commentView = findViewById(R.id.comment);
+
+        int score = AnswerCnt*5;
+        pointView.setText(Integer.toString(score)+"점");
+        String comment;
+        if(score<=20){
+            comment="실망이 조금 크네요...";
+        }
+        else if(score<=50){
+            comment="아직 우린 덜 친한가봐요..";
+        }
+        else if(score<=80){
+            comment="이 정도면 그럭저럭 잘 지내고 있죠?";
+        }
+        else if(score<100){
+            comment="나를 너무 많이 알아요!";
+        }
+        else{
+            comment="이제 우리 그만 멀어질 때가 됐네요.";
+        }
+        commentView.setText(comment);
+
 
     }
 
@@ -34,9 +58,8 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.retry:
-                Intent intent = new Intent(this, NameActivity.class);
+                Intent intent = new Intent(this, RetryPopupActivity.class);
                 startActivity(intent);
-                finish();
                 break;
             case R.id.share:
                 String message = userName+"님은 \'전현수 모의고사\'에서 "+Integer.toString(AnswerCnt)+"점을 맞았습니다!\n당신은 몇 점일까요?";
@@ -55,13 +78,13 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onBackPressed() {
-        if (System.currentTimeMillis() > backKeyPressedTime + 1000) {
+        if (System.currentTimeMillis() > backKeyPressedTime + 2000) {
             backKeyPressedTime = System.currentTimeMillis();
             toast = Toast.makeText(this, "\'뒤로\' 버튼을 한번 더 누르시면 종료됩니다.", Toast.LENGTH_SHORT);
             toast.show();
             return;
         }
-        if (System.currentTimeMillis() <= backKeyPressedTime + 1000) {
+        if (System.currentTimeMillis() <= backKeyPressedTime + 2000) {
             finish();
             toast.cancel();
         }

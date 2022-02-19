@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
 
-public class PopupActivity extends AppCompatActivity implements View.OnClickListener {
+public class NamePopupActivity extends AppCompatActivity implements View.OnClickListener {
 
     String userName;
     @Override
@@ -16,7 +16,7 @@ public class PopupActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         //타이틀바 없애기
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_popup);
+        setContentView(R.layout.activity_namepopup);
 
         Intent prev_intent = getIntent();
         userName = prev_intent.getExtras().getString("userName");
@@ -41,7 +41,6 @@ public class PopupActivity extends AppCompatActivity implements View.OnClickList
                 Intent intent = new Intent(this, StartActivity.class);
                 intent.putExtra("userName",userName);
                 startActivity(intent);
-                finish();
                 finish();
                 break;
         }

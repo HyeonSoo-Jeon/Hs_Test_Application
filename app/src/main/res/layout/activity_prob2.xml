@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="100dp"
-        android:textSize="30sp"
+        android:textSize="40sp"
         android:fontFamily="@font/iloveyou"
         android:text="Q2."
         android:textColor="@color/black"/>
@@ -23,6 +23,7 @@
         android:layout_marginTop="50dp"
         android:layout_height="wrap_content"
         android:text="Question"
+        android:lineSpacingExtra="20dp"
         android:textSize="20sp"
         android:fontFamily="@font/iloveyou"/>
     <View

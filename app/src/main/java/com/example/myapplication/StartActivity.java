@@ -8,6 +8,8 @@ import android.view.View;
 
 public class StartActivity extends AppCompatActivity implements View.OnClickListener {
 
+    NameActivity NA = (NameActivity) NameActivity.nameActivity;
+
     String userName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +19,7 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
 
         Intent prev_intent = getIntent();
         userName = prev_intent.getExtras().getString("userName");
+
 
 
         findViewById(R.id.test).setOnClickListener(this);
@@ -31,6 +34,7 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
                 intent.putExtra("userName",userName);
                 intent.putExtra("AnswerCnt",0);
                 startActivity(intent);
+                NA.finish();
                 finish();
                 break;
 

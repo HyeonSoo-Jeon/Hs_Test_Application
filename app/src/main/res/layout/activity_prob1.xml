@@ -15,7 +15,7 @@
         android:fontFamily="@font/iloveyou"
         android:text="Q1."
         android:textColor="@color/black"
-        android:textSize="30sp" />
+        android:textSize="40sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -23,7 +23,35 @@
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/iloveyou"
-        android:text="Question"
+        android:lineSpacingExtra="20dp"
+        android:text="전현수가 무신사에 등록한 키와 몸무게는\n175cm에 69kg이다."
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/Lv1_O"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="60dp"
+        android:padding="15dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/iloveyou"
+        android:gravity="left"
+        android:text="1. O"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/Lv1_X"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:padding="15dp"
+        android:layout_marginVertical="40dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/iloveyou"
+        android:gravity="left"
+        android:text="2. X"
+
         android:textSize="20sp" />
 
     <View
@@ -42,6 +70,5 @@
         android:padding="10dp"
         android:text="다음 문제!"
         android:textSize="20sp" />
-
 
 </LinearLayout>

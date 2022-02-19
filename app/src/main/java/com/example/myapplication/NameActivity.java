@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -9,13 +10,14 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class NameActivity extends AppCompatActivity implements View.OnClickListener {
+
+    public static Activity nameActivity;
 
     private EditText userName;
     private TextView titleHi;
@@ -29,6 +31,8 @@ public class NameActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_name);
         overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+
+        nameActivity = NameActivity.this;
 
 
         userName = findViewById(R.id.input);
@@ -75,12 +79,12 @@ public class NameActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.answer:
                 String userInput = userName.getText().toString();
 
-                while(userInput.charAt(0)==' '){
-                    userInput=userInput.substring(1);
-                }
-
                 if(userInput.length()!=0) {
-                    Intent intent = new Intent(this, PopupActivity.class);
+                    while(userInput.charAt(0)==' '){
+                        userInput=userInput.substring(1);
+                    }
+
+                    Intent intent = new Intent(this, NamePopupActivity.class);
                     intent.putExtra("userName",userInput);
                     startActivity(intent);
                 }
@@ -92,14 +96,20 @@ public class NameActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        userName.setText(null);
+    }
+
+    @Override
     public void onBackPressed() {
-        if (System.currentTimeMillis() > backKeyPressedTime + 1000) {
+        if (System.currentTimeMillis() > backKeyPressedTime + 2000) {
             backKeyPressedTime = System.currentTimeMillis();
             toast = Toast.makeText(this, "\'뒤로\' 버튼을 한번 더 누르시면 종료됩니다.", Toast.LENGTH_SHORT);
             toast.show();
             return;
         }
-        if (System.currentTimeMillis() <= backKeyPressedTime + 1000) {
+        if (System.currentTimeMillis() <= backKeyPressedTime + 2000) {
             finish();
             toast.cancel();
         }

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- 타이틀바 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/iloveyou"
+            android:gravity="center"
+            android:text="Retry"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/closeRetry"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="X"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_marginEnd="10dp"/>
+    </LinearLayout>
+    <!-- Notice -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="다시 하시겠습니까?"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:fontFamily="@font/iloveyou"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/confirmRetry"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/iloveyou"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="확인"
+            android:textColor="#0C5959"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/cancelRetry"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/iloveyou"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="취소"
+            android:textColor="#0C5959"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>

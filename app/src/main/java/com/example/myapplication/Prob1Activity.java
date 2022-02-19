@@ -11,7 +11,7 @@ public class Prob1Activity extends AppCompatActivity implements View.OnClickList
 
     String userName;
     int AnswerCnt;
-    private long backKeyPressedTime=0;
+    private long backKeyPressedTime = 0;
     private Toast toast;
 
     @Override
@@ -26,34 +26,39 @@ public class Prob1Activity extends AppCompatActivity implements View.OnClickList
 
         // 다음 레벨 버튼 바꾸기
         findViewById(R.id.ToLv2).setOnClickListener(this);
-
-
+        findViewById(R.id.Lv1_O).setOnClickListener(this);
+        findViewById(R.id.Lv1_X).setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             // 다음 레벨 버튼 바꾸기
             case R.id.ToLv2:
                 // 다음 액티비티 바꾸기
                 Intent intent = new Intent(this, Prob2Activity.class);
-                intent.putExtra("userName",userName);
-                intent.putExtra("AnswerCnt",AnswerCnt);
+                intent.putExtra("userName", userName);
+                intent.putExtra("AnswerCnt", AnswerCnt);
                 startActivity(intent);
                 finish();
                 break;
+            case R.id.Lv1_O:
+                break;
+            case R.id.Lv1_X:
+                break;
         }
     }
+
     @Override
     public void onBackPressed() {
-        if (System.currentTimeMillis() > backKeyPressedTime + 1000) {
+        if (System.currentTimeMillis() > backKeyPressedTime + 2000) {
             backKeyPressedTime = System.currentTimeMillis();
             toast = Toast.makeText(this, "\'뒤로\' 버튼을 한번 더 누르시면 종료됩니다.", Toast.LENGTH_SHORT);
             toast.show();
             return;
         }
-        if (System.currentTimeMillis() <= backKeyPressedTime + 1000) {
+        if (System.currentTimeMillis() <= backKeyPressedTime + 2000) {
             finish();
             toast.cancel();
         }
