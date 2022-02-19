@@ -5,15 +5,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
-public class Second extends AppCompatActivity implements View.OnClickListener {
+public class StartActivity extends AppCompatActivity implements View.OnClickListener {
 
+    String userName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second);
+        setContentView(R.layout.activity_start);
         overridePendingTransition(R.anim.horizon_enter, R.anim.horizon_exit);
+
+        Intent prev_intent = getIntent();
+        userName = prev_intent.getExtras().getString("userName");
 
 
         findViewById(R.id.test).setOnClickListener(this);
@@ -24,6 +27,11 @@ public class Second extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.test:
+                Intent intent = new Intent(this, Prob1Activity.class);
+                intent.putExtra("userName",userName);
+                intent.putExtra("AnswerCnt",0);
+                startActivity(intent);
+                finish();
                 break;
 
         }

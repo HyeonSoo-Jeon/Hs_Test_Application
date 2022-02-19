@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Second">
+    tools:context=".StartActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,20 +12,27 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/title_start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Hello World"
-            android:textSize="50dp" />
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="60dp"
+            android:text="준비됐나요?"
+            android:textSize="60sp"
+            android:fontFamily="@font/iloveyou"
+            android:textColor="@color/black"/>
+
 
         <Button
             android:id="@+id/test"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
+            android:layout_marginHorizontal="30dp"
             android:backgroundTint="#C3F2B6"
-            android:text="test" />
+            android:text="시작하기!"
+            android:textColor="@color/black"
+            android:fontFamily="@font/iloveyou"
+            android:textSize="20sp"/>
 
 
     </LinearLayout>

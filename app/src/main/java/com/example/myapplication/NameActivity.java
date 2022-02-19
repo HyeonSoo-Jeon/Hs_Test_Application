@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -20,15 +21,17 @@ public class NameActivity extends AppCompatActivity implements View.OnClickListe
     private TextView titleHi;
     private LinearLayout userInput;
 
+    private long backKeyPressedTime=0;
+    private Toast toast;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_name);
         overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 
 
-        userName = (EditText) findViewById(R.id.input);
-        Button mButton = (Button) findViewById(R.id.answer);
+        userName = findViewById(R.id.input);
         titleHi = findViewById(R.id.title_hi);
         userInput = findViewById(R.id.userName);
 
@@ -52,6 +55,17 @@ public class NameActivity extends AppCompatActivity implements View.OnClickListe
                 userInput.startAnimation(fadeIn);
             }
         }, 1000);
+        // 엔터키 방지
+        userName.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (keyCode == event.KEYCODE_ENTER){
+                    findViewById(R.id.answer).performClick();
+                    return true;
+                }
+                return false;
+            }
+        });
     }
 
 
@@ -60,6 +74,10 @@ public class NameActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()){
             case R.id.answer:
                 String userInput = userName.getText().toString();
+
+                while(userInput.charAt(0)==' '){
+                    userInput=userInput.substring(1);
+                }
 
                 if(userInput.length()!=0) {
                     Intent intent = new Intent(this, PopupActivity.class);
@@ -70,6 +88,20 @@ public class NameActivity extends AppCompatActivity implements View.OnClickListe
                     Toast.makeText(this, "이름을 입력해 주세요!", Toast.LENGTH_SHORT).show();
                 }
                 break;
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (System.currentTimeMillis() > backKeyPressedTime + 1000) {
+            backKeyPressedTime = System.currentTimeMillis();
+            toast = Toast.makeText(this, "\'뒤로\' 버튼을 한번 더 누르시면 종료됩니다.", Toast.LENGTH_SHORT);
+            toast.show();
+            return;
+        }
+        if (System.currentTimeMillis() <= backKeyPressedTime + 1000) {
+            finish();
+            toast.cancel();
         }
     }
 }

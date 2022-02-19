@@ -9,12 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-
+        <activity
+            android:name=".Prob1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Prob2Activity"
+            android:exported="false" />
         <activity
             android:name=".PopupActivity"
-            android:theme="@style/Theme.MyApplication.Dialog"/>
+            android:theme="@style/Theme.MyApplication.Dialog" />
         <activity
-            android:name=".Second"
+            android:name=".StartActivity"
             android:exported="false" />
         <activity
             android:name=".NameActivity"
@@ -24,6 +29,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

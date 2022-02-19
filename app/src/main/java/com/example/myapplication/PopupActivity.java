@@ -38,7 +38,7 @@ public class PopupActivity extends AppCompatActivity implements View.OnClickList
                 finish();
                 break;
             case R.id.confirmName:
-                Intent intent = new Intent(this, Second.class);
+                Intent intent = new Intent(this, StartActivity.class);
                 intent.putExtra("userName",userName);
                 startActivity(intent);
                 finish();
