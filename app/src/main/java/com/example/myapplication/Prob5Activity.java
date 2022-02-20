@@ -19,7 +19,7 @@ public class Prob5Activity extends AppCompatActivity implements View.OnClickList
     private long backKeyPressedTime=0;
     private Toast toast;
     int answer = 0;
-    Button btnO, btnX;
+    Button btn1, btn2, btn3, btn4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,20 +33,29 @@ public class Prob5Activity extends AppCompatActivity implements View.OnClickList
 
         // 여기
         findViewById(R.id.ToLv6).setOnClickListener(this);
-        findViewById(R.id.Lv5_O).setOnClickListener(this);
-        findViewById(R.id.Lv5_X).setOnClickListener(this);
+        findViewById(R.id.Lv5_1).setOnClickListener(this);
+        findViewById(R.id.Lv5_2).setOnClickListener(this);
+        findViewById(R.id.Lv5_3).setOnClickListener(this);
+        findViewById(R.id.Lv5_4).setOnClickListener(this);
         findViewById(R.id.LV5_back).setOnClickListener(this);
 
         //여기
-        btnO = findViewById(R.id.Lv5_O);
-        btnX = findViewById(R.id.Lv5_X);
-        if(Answers.get(2)==1){
-            btnO.setBackgroundColor(Color.GRAY);
-            answer=1;
-        }
-        else if(Answers.get(2)==2){
-            btnX.setBackgroundColor(Color.GRAY);
-            answer=2;
+        btn1 = findViewById(R.id.Lv5_1);
+        btn2 = findViewById(R.id.Lv5_2);
+        btn3 = findViewById(R.id.Lv5_3);
+        btn4 = findViewById(R.id.Lv5_4);
+        if (Answers.get(4) == 1) {
+            btn1.setBackgroundColor(Color.GRAY);
+            answer = 1;
+        } else if (Answers.get(4) == 2) {
+            btn2.setBackgroundColor(Color.GRAY);
+            answer = 2;
+        } else if (Answers.get(4) == 3) {
+            btn3.setBackgroundColor(Color.GRAY);
+            answer = 3;
+        } else if (Answers.get(4) == 4) {
+            btn4.setBackgroundColor(Color.GRAY);
+            answer = 4;
         }
     }
     @Override
@@ -63,21 +72,43 @@ public class Prob5Activity extends AppCompatActivity implements View.OnClickList
                 overridePendingTransition(R.anim.horizon_enterleft, R.anim.horizon_exitleft);
                 break;
             // 여기
-            case R.id.Lv5_O:
+            case R.id.Lv5_1:
                 answer = 1;
-                Answers.remove(1);
-                Answers.add(1,answer);
-                btnO.setBackgroundColor(Color.GRAY);
-                btnX.setBackgroundColor(Color.WHITE);
+                Answers.remove(4);
+                Answers.add(4, answer);
+                btn1.setBackgroundColor(Color.GRAY);
+                btn2.setBackgroundColor(Color.WHITE);
+                btn3.setBackgroundColor(Color.WHITE);
+                btn4.setBackgroundColor(Color.WHITE);
                 break;
-            // 여기
-            case R.id.Lv5_X:
+            case R.id.Lv5_2:
                 answer = 2;
-                Answers.remove(1);
-                Answers.add(1,answer);
-                btnO.setBackgroundColor(Color.WHITE);
-                btnX.setBackgroundColor(Color.GRAY);
+                Answers.remove(4);
+                Answers.add(4, answer);
+                btn1.setBackgroundColor(Color.WHITE);
+                btn2.setBackgroundColor(Color.GRAY);
+                btn3.setBackgroundColor(Color.WHITE);
+                btn4.setBackgroundColor(Color.WHITE);
                 break;
+            case R.id.Lv5_3:
+                answer = 3;
+                Answers.remove(4);
+                Answers.add(4, answer);
+                btn1.setBackgroundColor(Color.WHITE);
+                btn2.setBackgroundColor(Color.WHITE);
+                btn3.setBackgroundColor(Color.GRAY);
+                btn4.setBackgroundColor(Color.WHITE);
+                break;
+            case R.id.Lv5_4:
+                answer = 4;
+                Answers.remove(4);
+                Answers.add(4, answer);
+                btn1.setBackgroundColor(Color.WHITE);
+                btn2.setBackgroundColor(Color.WHITE);
+                btn3.setBackgroundColor(Color.WHITE);
+                btn4.setBackgroundColor(Color.GRAY);
+                break;
+
             // 여기
             case R.id.LV5_back:
                 // 여기
