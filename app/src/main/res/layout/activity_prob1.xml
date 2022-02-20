@@ -8,10 +8,22 @@
     tools:context=".Prob1Activity">
 
     <TextView
+        android:id="@+id/LV1_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/iloveyou"
+        android:text="@string/back"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:fontFamily="@font/iloveyou"
         android:text="Q1."
         android:textColor="@color/black"

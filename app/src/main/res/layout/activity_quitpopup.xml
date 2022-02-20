@@ -18,7 +18,7 @@
             android:layout_marginBottom="15dp"
             android:fontFamily="@font/iloveyou"
             android:gravity="center"
-            android:text="확인"
+            android:text="Quit"
             android:textColor="#000000"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -29,25 +29,24 @@
             android:layout_weight="1" />
 
         <TextView
-            android:id="@+id/closeConfirmName"
+            android:id="@+id/closeQuit"
             android:layout_width="40dp"
             android:layout_height="match_parent"
-            android:layout_marginEnd="20dp"
             android:gravity="center"
             android:text="X"
             android:textColor="#000000"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:layout_marginEnd="20dp"/>
     </LinearLayout>
     <!-- Notice -->
     <TextView
-        android:id="@+id/askName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:fontFamily="@font/iloveyou"
-        android:text="text"
+        android:text="그만 푸시겠습니까?"
         android:textColor="#000000"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:fontFamily="@font/iloveyou"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -56,7 +55,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/cancelName"
+            android:id="@+id/cancelQuit"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_margin="20dp"
@@ -66,9 +65,8 @@
             android:text="취소"
             android:textColor="#0C5959"
             android:textSize="20sp" />
-
         <TextView
-            android:id="@+id/confirmName"
+            android:id="@+id/confirmQuit"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_margin="20dp"
@@ -78,7 +76,6 @@
             android:text="확인"
             android:textColor="#0C5959"
             android:textSize="20sp" />
-
 
     </LinearLayout>
 

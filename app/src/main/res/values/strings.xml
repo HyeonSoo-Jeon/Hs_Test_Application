@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">현수 모의고사</string>
+    <string name="back"><![CDATA[<]]></string>
 </resources>

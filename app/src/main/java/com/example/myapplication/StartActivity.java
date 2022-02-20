@@ -17,7 +17,7 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-        overridePendingTransition(R.anim.horizon_enter, R.anim.horizon_exit);
+        overridePendingTransition(R.anim.horizon_enterleft, R.anim.horizon_exitleft);
 
         Intent prev_intent = getIntent();
         userName = prev_intent.getExtras().getString("userName");
@@ -42,6 +42,7 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
                 startActivity(intent);
                 NA.finish();
                 finish();
+                overridePendingTransition(R.anim.horizon_enterleft, R.anim.horizon_exitleft);
                 break;
 
         }

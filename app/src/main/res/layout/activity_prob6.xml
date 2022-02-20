@@ -8,7 +8,7 @@
     tools:context=".Prob1Activity">
 
     <TextView
-        android:id="@+id/LV2_back"
+        android:id="@+id/LV6_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/back"
@@ -24,7 +24,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/iloveyou"
-        android:text="Q2."
+        android:text="Q6."
         android:textColor="@color/black"
         android:textSize="40sp" />
 
@@ -39,7 +39,7 @@
         android:textSize="20sp" />
 
     <Button
-        android:id="@+id/Lv2_O"
+        android:id="@+id/Lv6_O"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
@@ -52,7 +52,7 @@
         android:textSize="20sp" />
 
     <Button
-        android:id="@+id/Lv2_X"
+        android:id="@+id/Lv6_X"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
@@ -70,7 +70,7 @@
         android:layout_weight="1" />
 
     <Button
-        android:id="@+id/ToLv3"
+        android:id="@+id/ToLv7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"

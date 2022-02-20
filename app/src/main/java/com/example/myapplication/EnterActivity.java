@@ -42,7 +42,7 @@ public class EnterActivity extends AppCompatActivity {
                 ImgView1.startAnimation(popAnim);
                 soundPool.play(soundPlay1, 1f,1f,0,0,1f);
             }
-        }, 200);
+        }, 300);
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -53,7 +53,7 @@ public class EnterActivity extends AppCompatActivity {
 
 
             }
-        }, 700);
+        }, 800);
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -64,7 +64,7 @@ public class EnterActivity extends AppCompatActivity {
 
 
             }
-        }, 1200);
+        }, 1300);
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -75,7 +75,7 @@ public class EnterActivity extends AppCompatActivity {
 
 
             }
-        }, 1700);
+        }, 1800);
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -84,7 +84,7 @@ public class EnterActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        }, 2000);
+        }, 2200);
     }
 
 }

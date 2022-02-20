@@ -23,7 +23,7 @@ public class NameActivity extends AppCompatActivity implements View.OnClickListe
     private TextView titleHi;
     private LinearLayout userInput;
 
-    private long backKeyPressedTime=0;
+    private long backKeyPressedTime = 0;
     private Toast toast;
 
     @Override
@@ -36,14 +36,15 @@ public class NameActivity extends AppCompatActivity implements View.OnClickListe
 
 
         userName = findViewById(R.id.input);
+
         titleHi = findViewById(R.id.title_hi);
         userInput = findViewById(R.id.userName);
 
         findViewById(R.id.answer).setOnClickListener(this);
 
-        Animation moveTop = AnimationUtils.loadAnimation(this,R.anim.title_trans);
-        Animation fadeIn = AnimationUtils.loadAnimation(this,R.anim.fadein);
-        moveTop.setInterpolator(AnimationUtils.loadInterpolator(this,android.R.anim.accelerate_decelerate_interpolator));
+        Animation moveTop = AnimationUtils.loadAnimation(this, R.anim.title_trans);
+        Animation fadeIn = AnimationUtils.loadAnimation(this, R.anim.fadein);
+        moveTop.setInterpolator(AnimationUtils.loadInterpolator(this, android.R.anim.accelerate_decelerate_interpolator));
 
 
         new Handler().postDelayed(new Runnable() {
@@ -63,7 +64,7 @@ public class NameActivity extends AppCompatActivity implements View.OnClickListe
         userName.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if (keyCode == event.KEYCODE_ENTER){
+                if (keyCode == event.KEYCODE_ENTER) {
                     findViewById(R.id.answer).performClick();
                     return true;
                 }
@@ -75,20 +76,18 @@ public class NameActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.answer:
                 String userInput = userName.getText().toString();
-
-                if(userInput.length()!=0) {
-                    while(userInput.charAt(0)==' '){
-                        userInput=userInput.substring(1);
-                    }
-
-                    Intent intent = new Intent(this, NamePopupActivity.class);
-                    intent.putExtra("userName",userInput);
-                    startActivity(intent);
+                while ( userInput.length() != 0 &&userInput.charAt(0) == ' ') {
+                    userInput = userInput.substring(1);
                 }
-                else{
+
+                if (userInput.length() != 0) {
+                    Intent intent = new Intent(this, NamePopupActivity.class);
+                    intent.putExtra("userName", userInput);
+                    startActivity(intent);
+                } else {
                     Toast.makeText(this, "이름을 입력해 주세요!", Toast.LENGTH_SHORT).show();
                 }
                 break;
@@ -111,6 +110,7 @@ public class NameActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (System.currentTimeMillis() <= backKeyPressedTime + 2000) {
             finish();
+            System.exit(0);
             toast.cancel();
         }
     }

@@ -28,7 +28,7 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
-        overridePendingTransition(R.anim.horizon_enter, R.anim.horizon_exit);
+        overridePendingTransition(R.anim.horizon_enterleft, R.anim.horizon_exitleft);
         resultActivity = ResultActivity.this;
 
         Intent prev_intent = getIntent();

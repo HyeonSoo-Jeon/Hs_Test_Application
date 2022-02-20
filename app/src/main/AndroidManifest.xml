@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.myapplication" >
+    package="com.example.myapplication">
 
     <application
         android:allowBackup="true"
@@ -8,11 +8,69 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_main_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyApplication" >
+        android:theme="@style/Theme.MyApplication">
+        <activity
+            android:name=".Prob19Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Prob18Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Prob17Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Prob16Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Prob15Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Prob14Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Prob13Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Prob12Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Prob11Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Prob10Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Prob9Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Prob8Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Prob7Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Prob6Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Prob5Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Prob4Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Prob3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Prob20Activity"
+            android:exported="false" />
+        <activity
+            android:name=".QuitPopupActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MyApplication.Dialog" />
         <activity
             android:name=".RetryPopupActivity"
-            android:theme="@style/Theme.MyApplication.Dialog"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.MyApplication.Dialog" />
         <activity
             android:name=".ResultActivity"
             android:exported="false" />
@@ -33,7 +91,7 @@
             android:exported="true" />
         <activity
             android:name=".EnterActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
