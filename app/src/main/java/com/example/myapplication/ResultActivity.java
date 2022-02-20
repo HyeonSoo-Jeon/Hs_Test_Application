@@ -80,7 +80,7 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
                 break;
             case R.id.share:
                 String message = userName+"님은 \'전현수 모의고사\'에서 "+Integer.toString(AnswerCnt)+"점을 맞았습니다!\n당신은 몇 점일까요?";
-                message += "\n\n현수에게 카톡해서 어플을 받아보세요!!";
+                message += "\n\n현수에게 카톡해서 모의고사 어플을 받아보세요!!";
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
                 sendIntent.putExtra(Intent.EXTRA_TEXT, message);
