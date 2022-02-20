@@ -35,7 +35,7 @@
         android:layout_marginTop="50dp"
         android:fontFamily="@font/iloveyou"
         android:lineSpacingExtra="20dp"
-        android:text="전현수의 핸드폰은 아이폰이다."
+        android:text="전현수는 운동할 때 왼손으로 한다."
         android:textSize="20sp" />
 
     <Button

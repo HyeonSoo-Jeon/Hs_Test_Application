@@ -35,11 +35,11 @@
         android:layout_marginTop="50dp"
         android:fontFamily="@font/iloveyou"
         android:lineSpacingExtra="20dp"
-        android:text="전현수의 핸드폰은 아이폰이다."
+        android:text="다음 중 전현수의 생일을 고르세요."
         android:textSize="20sp" />
 
     <Button
-        android:id="@+id/Lv7_O"
+        android:id="@+id/Lv7_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
@@ -48,21 +48,46 @@
         android:fontFamily="@font/iloveyou"
         android:gravity="left"
         android:padding="15dp"
-        android:text="1. O"
+        android:text="1. 4월 25일"
         android:textSize="20sp" />
 
     <Button
-        android:id="@+id/Lv7_X"
+        android:id="@+id/Lv7_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
-        android:layout_marginVertical="40dp"
+        android:layout_marginTop="25dp"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/iloveyou"
         android:gravity="left"
         android:padding="15dp"
-        android:text="2. X"
+        android:text="2. 5월 18일"
         android:textSize="20sp" />
+    <Button
+        android:id="@+id/Lv7_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/iloveyou"
+        android:gravity="left"
+        android:padding="15dp"
+        android:text="3. 6월 19일"
+        android:textSize="20sp" />
+    <Button
+        android:id="@+id/Lv7_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/iloveyou"
+        android:gravity="left"
+        android:padding="15dp"
+        android:text="4. 8월 29일"
+        android:textSize="20sp" />
+
 
     <View
         android:layout_width="0dp"

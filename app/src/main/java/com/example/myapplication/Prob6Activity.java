@@ -19,7 +19,7 @@ public class Prob6Activity extends AppCompatActivity implements View.OnClickList
     private long backKeyPressedTime=0;
     private Toast toast;
     int answer = 0;
-    Button btnO, btnX;
+
     Button btn1, btn2, btn3, btn4;
     int idx = 5;
 
