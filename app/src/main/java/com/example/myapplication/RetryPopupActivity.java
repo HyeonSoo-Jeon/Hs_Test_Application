@@ -9,6 +9,8 @@ import android.view.Window;
 
 public class RetryPopupActivity extends AppCompatActivity implements View.OnClickListener {
 
+    ResultActivity RA = (ResultActivity) ResultActivity.resultActivity;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +34,7 @@ public class RetryPopupActivity extends AppCompatActivity implements View.OnClic
                 Intent intent = new Intent(this, NameActivity.class);
                 startActivity(intent);
                 finish();
-                finish();
+                RA.finish();
                 break;
         }
     }

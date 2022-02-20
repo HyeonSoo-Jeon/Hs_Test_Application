@@ -2,28 +2,45 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class ResultActivity extends AppCompatActivity implements View.OnClickListener {
 
+    public static Activity resultActivity;
+
+    ArrayList<Integer> Answers, Corrects;
     String userName;
-    int AnswerCnt;
+    int AnswerCnt=0;
     private long backKeyPressedTime=0;
     private Toast toast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
         overridePendingTransition(R.anim.horizon_enter, R.anim.horizon_exit);
+        resultActivity = ResultActivity.this;
 
         Intent prev_intent = getIntent();
         userName = prev_intent.getExtras().getString("userName");
-        AnswerCnt = prev_intent.getExtras().getInt("AnswerCnt");
+        Answers = prev_intent.getExtras().getIntegerArrayList("Answers");
+        Corrects = new ArrayList<Integer>(Arrays.asList(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20));
+
+        for(int i=0;i<20;i++){
+            if(Answers.get(i)==Corrects.get(i)){
+                AnswerCnt+=1;
+            }
+        }
 
         findViewById(R.id.retry).setOnClickListener(this);
         findViewById(R.id.share).setOnClickListener(this);

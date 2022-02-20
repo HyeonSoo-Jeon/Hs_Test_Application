@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import java.util.ArrayList;
+
 public class StartActivity extends AppCompatActivity implements View.OnClickListener {
 
     NameActivity NA = (NameActivity) NameActivity.nameActivity;
@@ -30,9 +32,13 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.test:
+                ArrayList<Integer> answers = new ArrayList<>();
+                for(int i =0;i<20;i++){
+                    answers.add(0);
+                }
                 Intent intent = new Intent(this, Prob1Activity.class);
                 intent.putExtra("userName",userName);
-                intent.putExtra("AnswerCnt",0);
+                intent.putExtra("Answers",answers);
                 startActivity(intent);
                 NA.finish();
                 finish();

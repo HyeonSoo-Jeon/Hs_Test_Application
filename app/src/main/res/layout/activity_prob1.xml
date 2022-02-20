@@ -32,11 +32,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="60dp"
-        android:padding="15dp"
+        android:layout_marginTop="80dp"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/iloveyou"
         android:gravity="left"
+        android:padding="15dp"
         android:text="1. O"
         android:textSize="20sp" />
 
@@ -45,13 +45,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
-        android:padding="15dp"
         android:layout_marginVertical="40dp"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/iloveyou"
         android:gravity="left"
+        android:padding="15dp"
         android:text="2. X"
-
         android:textSize="20sp" />
 
     <View

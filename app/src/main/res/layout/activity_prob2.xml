@@ -3,33 +3,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_vertical"
     android:orientation="vertical"
-    tools:context=".Prob1Activity"
-    android:gravity="center_vertical">
+    tools:context=".Prob1Activity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="100dp"
-        android:textSize="40sp"
         android:fontFamily="@font/iloveyou"
         android:text="Q2."
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:textSize="40sp" />
 
     <TextView
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="50dp"
-        android:layout_height="wrap_content"
-        android:text="Question"
+        android:fontFamily="@font/iloveyou"
         android:lineSpacingExtra="20dp"
-        android:textSize="20sp"
-        android:fontFamily="@font/iloveyou"/>
+        android:text="전현수의 핸드폰은 아이폰이다."
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/Lv2_O"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/iloveyou"
+        android:gravity="left"
+        android:padding="15dp"
+        android:text="1. O"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/Lv2_X"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="40dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/iloveyou"
+        android:gravity="left"
+        android:padding="15dp"
+        android:text="2. X"
+        android:textSize="20sp" />
+
     <View
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1" />
+
     <Button
         android:id="@+id/ToLv3"
         android:layout_width="match_parent"
@@ -37,10 +65,10 @@
         android:layout_marginHorizontal="30dp"
         android:layout_marginBottom="40dp"
         android:backgroundTint="#C3F2B6"
-        android:text="다음 문제!"
-        android:textSize="20sp"
         android:fontFamily="@font/iloveyou"
-        android:padding="10dp"/>
+        android:padding="10dp"
+        android:text="다음 문제!"
+        android:textSize="20sp" />
 
 
 </LinearLayout>
