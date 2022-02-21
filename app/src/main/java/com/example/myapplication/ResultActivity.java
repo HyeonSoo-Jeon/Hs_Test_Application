@@ -28,13 +28,13 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
-        overridePendingTransition(R.anim.horizon_enterleft, R.anim.horizon_exitleft);
+//        overridePendingTransition(R.anim.horizon_enterleft, R.anim.horizon_exitleft);
         resultActivity = ResultActivity.this;
 
         Intent prev_intent = getIntent();
         userName = prev_intent.getExtras().getString("userName");
         Answers = prev_intent.getExtras().getIntegerArrayList("Answers");
-        Corrects = new ArrayList<Integer>(Arrays.asList(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20));
+        Corrects = new ArrayList<Integer>(Arrays.asList(1,2,4,2,3,3,1,2,1,4,4,1,3,2,2,1,4,3,3,1));
 
         for(int i=0;i<20;i++){
             if(Answers.get(i)==Corrects.get(i)){
@@ -104,6 +104,7 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
         if (System.currentTimeMillis() <= backKeyPressedTime + 2000) {
             finish();
             toast.cancel();
+            System.exit(0);
         }
     }
 }

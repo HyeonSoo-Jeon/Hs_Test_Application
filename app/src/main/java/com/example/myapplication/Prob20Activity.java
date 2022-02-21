@@ -57,24 +57,24 @@ public class Prob20Activity extends AppCompatActivity implements View.OnClickLis
             // 다음 레벨 버튼 바꾸기
             case R.id.ToResult:
                 // 다음 액티비티 바꾸기
-                Intent intent = new Intent(this, ResultActivity.class);
+                Intent intent = new Intent(this, GradingActivity.class);
                 intent.putExtra("userName",userName);
                 intent.putExtra("Answers",Answers);
                 startActivity(intent);
                 finish();
-                overridePendingTransition(R.anim.horizon_enterleft, R.anim.horizon_exitleft);
+//                overridePendingTransition(R.anim.horizon_enterleft, R.anim.horizon_exitleft);
                 break;
             case R.id.Lv20_O:
                 answer = 1;
-                Answers.remove(1);
-                Answers.add(1,answer);
+                Answers.remove(19);
+                Answers.add(19,answer);
                 btnO.setBackgroundColor(Color.GRAY);
                 btnX.setBackgroundColor(Color.WHITE);
                 break;
             case R.id.Lv20_X:
                 answer = 2;
-                Answers.remove(1);
-                Answers.add(1,answer);
+                Answers.remove(19);
+                Answers.add(19,answer);
                 btnO.setBackgroundColor(Color.WHITE);
                 btnX.setBackgroundColor(Color.GRAY);
                 break;
@@ -99,6 +99,7 @@ public class Prob20Activity extends AppCompatActivity implements View.OnClickLis
         if (System.currentTimeMillis() <= backKeyPressedTime + 2000) {
             finish();
             toast.cancel();
+            System.exit(0);
         }
     }
 }

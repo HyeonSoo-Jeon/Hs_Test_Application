@@ -20,7 +20,7 @@ public class Prob14Activity extends AppCompatActivity implements View.OnClickLis
     private Toast toast;
     int answer = 0;
     Button btn1, btn2, btn3, btn4;
-    int idx = 12;
+    int idx = 13;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -15,12 +15,20 @@
             android:id="@+id/title_start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="20dp"
             android:layout_marginStart="30dp"
             android:text="준비됐나요?"
             android:textSize="60sp"
             android:fontFamily="@font/iloveyou"
             android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:layout_marginStart="30dp"
+            android:text="문제는 총 20문제 입니다!"
+            android:textSize="20sp"
+            android:fontFamily="@font/iloveyou"/>
 
 
         <Button

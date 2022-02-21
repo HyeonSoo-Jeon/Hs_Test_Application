@@ -35,7 +35,7 @@
         android:layout_marginTop="50dp"
         android:fontFamily="@font/iloveyou"
         android:lineSpacingExtra="20dp"
-        android:text="전현수의 카톡 친구는 몇명일까?\n(22.02.20 기준, 숨김 친구와 차단은 제외)"
+        android:text="다음 중 전현수의 혈액형은?"
         android:textSize="20sp" />
 
     <Button
@@ -48,7 +48,7 @@
         android:fontFamily="@font/iloveyou"
         android:gravity="left"
         android:padding="15dp"
-        android:text="1. 297"
+        android:text="1. A"
         android:textSize="20sp" />
 
     <Button
@@ -61,7 +61,7 @@
         android:fontFamily="@font/iloveyou"
         android:gravity="left"
         android:padding="15dp"
-        android:text="2. 314"
+        android:text="2. B"
         android:textSize="20sp" />
 
     <Button
@@ -74,7 +74,7 @@
         android:fontFamily="@font/iloveyou"
         android:gravity="left"
         android:padding="15dp"
-        android:text="3. 402"
+        android:text="3. AB"
         android:textSize="20sp" />
 
     <Button
@@ -87,7 +87,7 @@
         android:fontFamily="@font/iloveyou"
         android:gravity="left"
         android:padding="15dp"
-        android:text="4. 536"
+        android:text="4. O"
         android:textSize="20sp" />
 
     <View

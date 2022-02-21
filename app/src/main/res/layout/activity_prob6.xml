@@ -24,7 +24,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/iloveyou"
-        android:text="Q7."
+        android:text="Q6."
         android:textColor="@color/black"
         android:textSize="40sp" />
 
@@ -35,7 +35,7 @@
         android:layout_marginTop="50dp"
         android:fontFamily="@font/iloveyou"
         android:lineSpacingExtra="20dp"
-        android:text="다음 중 전현수의 생일을 고르세요."
+        android:text="다음 중 전현수의 주전공을 고르세요."
         android:textSize="20sp" />
 
     <Button

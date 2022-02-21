@@ -40,11 +40,11 @@ public class Prob8Activity extends AppCompatActivity implements View.OnClickList
         //여기
         btnO = findViewById(R.id.Lv8_O);
         btnX = findViewById(R.id.Lv8_X);
-        if(Answers.get(2)==1){
+        if(Answers.get(7)==1){
             btnO.setBackgroundColor(Color.GRAY);
             answer=1;
         }
-        else if(Answers.get(2)==2){
+        else if(Answers.get(7)==2){
             btnX.setBackgroundColor(Color.GRAY);
             answer=2;
         }
@@ -65,16 +65,16 @@ public class Prob8Activity extends AppCompatActivity implements View.OnClickList
             // 여기
             case R.id.Lv8_O:
                 answer = 1;
-                Answers.remove(1);
-                Answers.add(1,answer);
+                Answers.remove(7);
+                Answers.add(7,answer);
                 btnO.setBackgroundColor(Color.GRAY);
                 btnX.setBackgroundColor(Color.WHITE);
                 break;
             // 여기
             case R.id.Lv8_X:
                 answer = 2;
-                Answers.remove(1);
-                Answers.add(1,answer);
+                Answers.remove(7);
+                Answers.add(7,answer);
                 btnO.setBackgroundColor(Color.WHITE);
                 btnX.setBackgroundColor(Color.GRAY);
                 break;
@@ -101,6 +101,8 @@ public class Prob8Activity extends AppCompatActivity implements View.OnClickList
         if (System.currentTimeMillis() <= backKeyPressedTime + 2000) {
             finish();
             toast.cancel();
+            System.exit(0);
+
         }
     }
 }

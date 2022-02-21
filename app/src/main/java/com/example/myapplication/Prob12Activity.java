@@ -132,6 +132,8 @@ public class Prob12Activity extends AppCompatActivity implements View.OnClickLis
         if (System.currentTimeMillis() <= backKeyPressedTime + 2000) {
             finish();
             toast.cancel();
+            System.exit(0);
+
         }
     }
 }
