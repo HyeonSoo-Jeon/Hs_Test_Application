@@ -69,6 +69,14 @@
             android:text="공유하기"
             android:textSize="20sp" />
     </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="60dp"
+        android:fontFamily="@font/iloveyou"
+        android:text="친구와 현수에게 공유해보세요!!"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
 
 
 </LinearLayout>
