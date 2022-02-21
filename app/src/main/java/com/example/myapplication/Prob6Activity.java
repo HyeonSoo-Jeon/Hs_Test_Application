@@ -67,13 +67,18 @@ public class Prob6Activity extends AppCompatActivity implements View.OnClickList
             // 여기
             case R.id.ToLv7:
                 // 여기
-                Intent intent = new Intent(this, Prob7Activity.class);
-                intent.putExtra("userName",userName);
-                intent.putExtra("Answers",Answers);
-                startActivity(intent);
-                finish();
-                overridePendingTransition(R.anim.horizon_enterleft, R.anim.horizon_exitleft);
-                break;
+                if (answer == 0) {
+                    toast = Toast.makeText(this, "정답을 눌러주세요!", Toast.LENGTH_SHORT);
+                    toast.show();
+                } else {
+                    Intent intent = new Intent(this, Prob7Activity.class);
+                    intent.putExtra("userName", userName);
+                    intent.putExtra("Answers", Answers);
+                    startActivity(intent);
+                    finish();
+                    overridePendingTransition(R.anim.horizon_enterleft, R.anim.horizon_exitleft);
+                    break;
+                }
             // 여기
             case R.id.Lv6_1:
                 answer = 1;

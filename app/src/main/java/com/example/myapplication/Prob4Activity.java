@@ -16,7 +16,7 @@ public class Prob4Activity extends AppCompatActivity implements View.OnClickList
 
     ArrayList<Integer> Answers;
     String userName;
-    private long backKeyPressedTime=0;
+    private long backKeyPressedTime = 0;
     private Toast toast;
     int answer = 0;
     Button btn1, btn2, btn3, btn4;
@@ -58,19 +58,25 @@ public class Prob4Activity extends AppCompatActivity implements View.OnClickList
             answer = 4;
         }
     }
+
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             // 여기
             case R.id.ToLv5:
                 // 여기
-                Intent intent = new Intent(this, Prob5Activity.class);
-                intent.putExtra("userName",userName);
-                intent.putExtra("Answers",Answers);
-                startActivity(intent);
-                finish();
-                overridePendingTransition(R.anim.horizon_enterleft, R.anim.horizon_exitleft);
-                break;
+                if (answer == 0) {
+                    toast = Toast.makeText(this, "정답을 눌러주세요!", Toast.LENGTH_SHORT);
+                    toast.show();
+                } else {
+                    Intent intent = new Intent(this, Prob5Activity.class);
+                    intent.putExtra("userName", userName);
+                    intent.putExtra("Answers", Answers);
+                    startActivity(intent);
+                    finish();
+                    overridePendingTransition(R.anim.horizon_enterleft, R.anim.horizon_exitleft);
+                    break;
+                }
                 // 여기
             case R.id.Lv4_1:
                 answer = 1;
@@ -112,14 +118,15 @@ public class Prob4Activity extends AppCompatActivity implements View.OnClickList
             case R.id.LV4_back:
                 // 여기
                 Intent intent2 = new Intent(this, Prob3Activity.class);
-                intent2.putExtra("userName",userName);
-                intent2.putExtra("Answers",Answers);
+                intent2.putExtra("userName", userName);
+                intent2.putExtra("Answers", Answers);
                 startActivity(intent2);
                 finish();
                 overridePendingTransition(R.anim.horizon_enterright, R.anim.horizon_exitright);
                 break;
         }
     }
+
     @Override
     public void onBackPressed() {
         if (System.currentTimeMillis() > backKeyPressedTime + 2000) {
