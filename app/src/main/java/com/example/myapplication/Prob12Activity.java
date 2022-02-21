@@ -19,7 +19,8 @@ public class Prob12Activity extends AppCompatActivity implements View.OnClickLis
     private long backKeyPressedTime=0;
     private Toast toast;
     int answer = 0;
-    Button btnO, btnX;
+    Button btn1, btn2, btn3, btn4;
+    int idx = 11;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,20 +34,29 @@ public class Prob12Activity extends AppCompatActivity implements View.OnClickLis
 
         // 여기
         findViewById(R.id.ToLv13).setOnClickListener(this);
-        findViewById(R.id.Lv12_O).setOnClickListener(this);
-        findViewById(R.id.Lv12_X).setOnClickListener(this);
+        findViewById(R.id.Lv12_1).setOnClickListener(this);
+        findViewById(R.id.Lv12_2).setOnClickListener(this);
+        findViewById(R.id.Lv12_3).setOnClickListener(this);
+        findViewById(R.id.Lv12_4).setOnClickListener(this);
         findViewById(R.id.LV12_back).setOnClickListener(this);
 
-        //여기
-        btnO = findViewById(R.id.Lv12_O);
-        btnX = findViewById(R.id.Lv12_X);
-        if(Answers.get(2)==1){
-            btnO.setBackgroundColor(Color.GRAY);
-            answer=1;
-        }
-        else if(Answers.get(2)==2){
-            btnX.setBackgroundColor(Color.GRAY);
-            answer=2;
+        btn1 = findViewById(R.id.Lv12_1);
+        btn2 = findViewById(R.id.Lv12_2);
+        btn3 = findViewById(R.id.Lv12_3);
+        btn4 = findViewById(R.id.Lv12_4);
+        int value = Answers.get(idx);
+        if (value == 1) {
+            btn1.setBackgroundColor(Color.GRAY);
+            answer = 1;
+        } else if (value == 2) {
+            btn2.setBackgroundColor(Color.GRAY);
+            answer = 2;
+        } else if (value == 3) {
+            btn3.setBackgroundColor(Color.GRAY);
+            answer = 3;
+        } else if (value == 4) {
+            btn4.setBackgroundColor(Color.GRAY);
+            answer = 4;
         }
     }
     @Override
@@ -63,20 +73,41 @@ public class Prob12Activity extends AppCompatActivity implements View.OnClickLis
                 overridePendingTransition(R.anim.horizon_enterleft, R.anim.horizon_exitleft);
                 break;
             // 여기
-            case R.id.Lv12_O:
+            case R.id.Lv12_1:
                 answer = 1;
-                Answers.remove(1);
-                Answers.add(1,answer);
-                btnO.setBackgroundColor(Color.GRAY);
-                btnX.setBackgroundColor(Color.WHITE);
+                Answers.remove(idx);
+                Answers.add(idx, answer);
+                btn1.setBackgroundColor(Color.GRAY);
+                btn2.setBackgroundColor(Color.WHITE);
+                btn3.setBackgroundColor(Color.WHITE);
+                btn4.setBackgroundColor(Color.WHITE);
                 break;
-            // 여기
-            case R.id.Lv12_X:
+            case R.id.Lv12_2:
                 answer = 2;
-                Answers.remove(1);
-                Answers.add(1,answer);
-                btnO.setBackgroundColor(Color.WHITE);
-                btnX.setBackgroundColor(Color.GRAY);
+                Answers.remove(idx);
+                Answers.add(idx, answer);
+                btn1.setBackgroundColor(Color.WHITE);
+                btn2.setBackgroundColor(Color.GRAY);
+                btn3.setBackgroundColor(Color.WHITE);
+                btn4.setBackgroundColor(Color.WHITE);
+                break;
+            case R.id.Lv12_3:
+                answer = 3;
+                Answers.remove(idx);
+                Answers.add(idx, answer);
+                btn1.setBackgroundColor(Color.WHITE);
+                btn2.setBackgroundColor(Color.WHITE);
+                btn3.setBackgroundColor(Color.GRAY);
+                btn4.setBackgroundColor(Color.WHITE);
+                break;
+            case R.id.Lv12_4:
+                answer = 4;
+                Answers.remove(idx);
+                Answers.add(idx, answer);
+                btn1.setBackgroundColor(Color.WHITE);
+                btn2.setBackgroundColor(Color.WHITE);
+                btn3.setBackgroundColor(Color.WHITE);
+                btn4.setBackgroundColor(Color.GRAY);
                 break;
             // 여기
             case R.id.LV12_back:
