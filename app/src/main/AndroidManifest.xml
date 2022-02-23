@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.myapplication">
+    package="com.example.HsTest">
 
     <application
         android:allowBackup="true"
@@ -10,90 +10,90 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name=".GradingActivity"
+            android:name="com.example.HsTest.GradingActivity"
             android:exported="false" />
         <activity
-            android:name=".Prob19Activity"
+            android:name="com.example.HsTest.Prob19Activity"
             android:exported="false" />
         <activity
-            android:name=".Prob18Activity"
+            android:name="com.example.HsTest.Prob18Activity"
             android:exported="false" />
         <activity
-            android:name=".Prob17Activity"
+            android:name="com.example.HsTest.Prob17Activity"
             android:exported="false" />
         <activity
-            android:name=".Prob16Activity"
+            android:name="com.example.HsTest.Prob16Activity"
             android:exported="false" />
         <activity
-            android:name=".Prob15Activity"
+            android:name="com.example.HsTest.Prob15Activity"
             android:exported="false" />
         <activity
-            android:name=".Prob14Activity"
+            android:name="com.example.HsTest.Prob14Activity"
             android:exported="false" />
         <activity
-            android:name=".Prob13Activity"
+            android:name="com.example.HsTest.Prob13Activity"
             android:exported="false" />
         <activity
-            android:name=".Prob12Activity"
+            android:name="com.example.HsTest.Prob12Activity"
             android:exported="false" />
         <activity
-            android:name=".Prob11Activity"
+            android:name="com.example.HsTest.Prob11Activity"
             android:exported="false" />
         <activity
-            android:name=".Prob10Activity"
+            android:name="com.example.HsTest.Prob10Activity"
             android:exported="false" />
         <activity
-            android:name=".Prob9Activity"
+            android:name="com.example.HsTest.Prob9Activity"
             android:exported="false" />
         <activity
-            android:name=".Prob8Activity"
+            android:name="com.example.HsTest.Prob8Activity"
             android:exported="false" />
         <activity
-            android:name=".Prob7Activity"
+            android:name="com.example.HsTest.Prob7Activity"
             android:exported="false" />
         <activity
-            android:name=".Prob6Activity"
+            android:name="com.example.HsTest.Prob6Activity"
             android:exported="false" />
         <activity
-            android:name=".Prob5Activity"
+            android:name="com.example.HsTest.Prob5Activity"
             android:exported="false" />
         <activity
-            android:name=".Prob4Activity"
+            android:name="com.example.HsTest.Prob4Activity"
             android:exported="false" />
         <activity
-            android:name=".Prob3Activity"
+            android:name="com.example.HsTest.Prob3Activity"
             android:exported="false" />
         <activity
-            android:name=".Prob20Activity"
+            android:name="com.example.HsTest.Prob20Activity"
             android:exported="false" />
         <activity
-            android:name=".QuitPopupActivity"
+            android:name="com.example.HsTest.QuitPopupActivity"
             android:exported="false"
             android:theme="@style/Theme.MyApplication.Dialog" />
         <activity
-            android:name=".RetryPopupActivity"
+            android:name="com.example.HsTest.RetryPopupActivity"
             android:exported="false"
             android:theme="@style/Theme.MyApplication.Dialog" />
         <activity
-            android:name=".ResultActivity"
+            android:name="com.example.HsTest.ResultActivity"
             android:exported="false" />
         <activity
-            android:name=".Prob1Activity"
+            android:name="com.example.HsTest.Prob1Activity"
             android:exported="false" />
         <activity
-            android:name=".Prob2Activity"
+            android:name="com.example.HsTest.Prob2Activity"
             android:exported="false" />
         <activity
-            android:name=".NamePopupActivity"
+            android:name="com.example.HsTest.NamePopupActivity"
             android:theme="@style/Theme.MyApplication.Dialog" />
         <activity
-            android:name=".StartActivity"
+            android:name="com.example.HsTest.StartActivity"
             android:exported="false" />
         <activity
-            android:name=".NameActivity"
+            android:name="com.example.HsTest.NameActivity"
             android:exported="true" />
         <activity
-            android:name=".EnterActivity"
+            android:name="com.example.HsTest.EnterActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -48,7 +48,7 @@
         android:fontFamily="@font/iloveyou"
         android:gravity="left"
         android:padding="15dp"
-        android:text="1. 에타브리임 핫게시글을 넘어 베스트 게시글 작성"
+        android:text="1. 에타 핫게시글을 넘어 베스트 게시글 작성"
         android:textSize="20sp" />
 
     <Button

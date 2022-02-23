@@ -22,20 +22,32 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center">
 
-            <ImageView
+            <TextView
                 android:id="@+id/str1"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_margin="20dp"
-                android:background="#C3F2B6"
-                android:visibility="invisible"/>
+                android:background="@drawable/rounding_lt"
+                android:fontFamily="@font/iloveyou"
+                android:gravity="center"
+                android:text="현"
+                android:textColor="@color/black"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                android:visibility="invisible" />
 
-            <ImageView
+            <TextView
                 android:id="@+id/str2"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_margin="20dp"
-                android:background="#C3F2B6"
+                android:background="@drawable/rounding_rt"
+                android:fontFamily="@font/iloveyou"
+                android:gravity="center"
+                android:text="수"
+                android:textColor="@color/black"
+                android:textSize="50sp"
+                android:textStyle="bold"
                 android:visibility="invisible" />
         </LinearLayout>
 
@@ -44,20 +56,32 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center">
 
-            <ImageView
+            <TextView
                 android:id="@+id/str3"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_margin="20dp"
-                android:background="#C3F2B6"
+                android:background="@drawable/rounding_lb"
+                android:fontFamily="@font/iloveyou"
+                android:gravity="center"
+                android:text="고"
+                android:textColor="@color/black"
+                android:textSize="50sp"
+                android:textStyle="bold"
                 android:visibility="invisible" />
 
-            <ImageView
+            <TextView
                 android:id="@+id/str4"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_margin="20dp"
-                android:background="#C3F2B6"
+                android:background="@drawable/rounding_rb"
+                android:fontFamily="@font/iloveyou"
+                android:gravity="center"
+                android:text="사"
+                android:textColor="@color/black"
+                android:textSize="50sp"
+                android:textStyle="bold"
                 android:visibility="invisible" />
         </LinearLayout>
 
