@@ -79,8 +79,8 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
                 startActivity(intent);
                 break;
             case R.id.share:
-                String message = userName+"님은 \'전현수 모의고사\'에서 "+Integer.toString(AnswerCnt*5)+"점을 맞았습니다!\n당신은 몇 점일까요?";
-                message += "\n\nPlay Store에서 모의고사 어플을 받아보세요!!\n\nhttps://play.google.com/store/apps/details?id=com.hscode.hstest";
+                String message = userName+"님은 \'전현수 모의고사\'에서 "+Integer.toString(AnswerCnt*5)+"점을 맞았습니다!🤣\n당신은 몇 점일까요??";
+                message += "\n\nPlay Store에서 모의고사 어플을 받아보세요!!💯\n\nhttps://play.google.com/store/apps/details?id=com.hscode.hstest";
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
                 sendIntent.putExtra(Intent.EXTRA_TEXT, message);
